@@ -1,5 +1,5 @@
 import Header from '../Header/Header.jsx'
-import Card from '../Card/Card.jsx';
+import Card from '../Profile card/Card.jsx';
 import styles from './App.module.css';
 import ProjectsSection from '../ProjectsSection/ProjectsSection.jsx';
 import ContactSection from '../ContactSection/ContactSection.jsx';
