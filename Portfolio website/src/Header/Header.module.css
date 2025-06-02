@@ -7,7 +7,7 @@
     transition: all 0.3s ease;
     transform: translateY(0);
     box-shadow: none;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Poppins, Montserrat;
 }
   .navList {
     display: flex;

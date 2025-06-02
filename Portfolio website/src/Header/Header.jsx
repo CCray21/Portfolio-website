@@ -20,7 +20,7 @@ function Header()
     }, [scrolled]);
 
     return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <div className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
             <ul className={styles.navList}>
             <li><a href="#aboutMe">About me</a></li>
@@ -29,7 +29,7 @@ function Header()
             <li><a href="/CV.docx" download>CV</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 }
 export default Header
