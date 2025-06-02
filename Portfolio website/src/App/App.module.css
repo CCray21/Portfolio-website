@@ -1,0 +1,30 @@
+.header{
+  background: linear-gradient(to right, #0d1117, #001aff);
+  color: #eaeaea;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  background-color: #0d1117;
+  color: #eaeaea;
+  padding: 4rem 2rem;
+}
+.projects {
+  background: linear-gradient(to right, #001aff, #00d1ff);
+  color: white;
+  padding: 4rem 2rem;
+}
+.contactSection {
+  background-color: #f5f5f5;
+  color: #111;
+  padding: 4rem 2rem;
+}
+
+

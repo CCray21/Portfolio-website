@@ -1,0 +1,29 @@
+.contactCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 1200px;
+    transition: background-color 0.3s ease;
+}
+.contactTitle {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.contactSection {
+    padding: 40px 20px;
+    background-color: blue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contactDescription {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 100px;
+    color: white;
+}
