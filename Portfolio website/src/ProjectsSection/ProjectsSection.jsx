@@ -18,7 +18,7 @@ function ProjectsSection() {
                     color = "turquoise"
                     img={XLN}
                     title="Daisy communications duplicate case prevention system"
-                    description="I worked with a small team to make a website for daisy communications. This includes but not limited to a php mailer bot and a staff hierarchy system."
+                    description="I worked with a small team to make a website for Daisy Communications. This includes (but not limited to) a PHP mailer bot and a staff hierarchy system."
                 />
                 <ProjectCard
                     index={2}
@@ -26,7 +26,7 @@ function ProjectsSection() {
                     img={SmartHome}
                     color="lightblue"
                     title="Smart home system"
-                    description="A console c++ app that simulates a smart home system with functions for adding, altering and removing devices. loading and saving to a text file is also supported."
+                    description="A console C++ app that simulates a smart home system with functions for adding, altering and removing devices. Loading and saving to a text file is also supported."
                 />
                 <ProjectCard
                     index={3}
@@ -34,7 +34,7 @@ function ProjectsSection() {
                     img={MiniApps}
                     color="red"
                     title="Mini apps"
-                    description="For my first semester project, I created a console based application with a top level menu system, a trinary converter, a school roster and a ISBN code verifier"
+                    description="For my first semester project, I created a console based application with a top level menu system, a trinary converter, a school roster and an ISBN code verifier"
                 />
             </div>
         </section>
