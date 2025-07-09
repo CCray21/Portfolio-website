@@ -26,7 +26,7 @@ function Header()
             <li><a href="#aboutMe">About me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="/CV.docx" download>CV</a></li>
+            <li><a href="/CV.docx" download>CV (download)</a></li>
         </ul>
       </nav>
     </div>
