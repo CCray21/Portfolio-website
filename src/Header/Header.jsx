@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import React, { useState, useEffect } from 'react';
+import react, { useState, useEffect } from 'react';
 
 function Header()
 {
@@ -7,20 +7,23 @@ function Header()
     
     useEffect(() => {
         function handleScroll() {
-            if (window.scrollY > 100 && !scrolled) {
-              setScrolled(true);
-            } else if (window.scrollY < 60 && scrolled) {
-              setScrolled(false);
-            }
+          console.log("scrolled:", window.scrollY);
+          if (window.scrollY > 1) {
+            setScrolled(true);
+            console.log("scrolled");
+          } else if (window.scrollY < 1) {
+            setScrolled(false);
+            console.log("unscrolled");
           }
+        }
           
     
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [scrolled]);
+    }, []);
 
     return (
-    <div className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
             <ul className={styles.navList}>
             <li><a href="#aboutMe">About me</a></li>
@@ -29,7 +32,7 @@ function Header()
             <li><a href="/CV.docx" download>CV (download)</a></li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 export default Header

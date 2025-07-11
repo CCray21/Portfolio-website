@@ -17,9 +17,7 @@ function App() {
   },[activeSection]);
   return(
     <>
-    <section className={styles.header}>
       <Header/>
-    </section>
     <section className = {styles.aboutMe} id="aboutMe">
       <Card/>
     </section>
