@@ -4,6 +4,7 @@ import react, { useState, useEffect } from 'react';
 function Header()
 {
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     
     useEffect(() => {
         function handleScroll() {
@@ -22,14 +23,22 @@ function Header()
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const toggleMenu = () => {
+      setMenuOpen(prev => !prev)
+      console.log('menuOpen')
+    }
+
     return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
-            <ul className={styles.navList}>
-            <li><a href="#aboutMe">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="/CV.docx" download>CV (download)</a></li>
+        <button className={styles.hamburger} onClick={toggleMenu}>
+        ☰
+        </button>
+            <ul className={`${styles.navList} ${menuOpen ? styles.open : ''}`}>
+            <li><a href="#aboutMe" onClick={() => setMenuOpen(false)}>About me</a></li>
+            <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
+            <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+            <li><a href="/CV.docx" download onClick={() => setMenuOpen(false)}>CV (download)</a></li>
         </ul>
       </nav>
     </header>
