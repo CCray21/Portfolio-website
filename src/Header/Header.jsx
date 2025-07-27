@@ -31,9 +31,7 @@ function Header()
     return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
-        <button className={styles.hamburger} onClick={toggleMenu}>
-        ☰
-        </button>
+        <button className={styles.hamburger} onClick={toggleMenu}>☰</button>
             <ul className={`${styles.navList} ${menuOpen ? styles.open : ''}`}>
             <li><a href="#aboutMe" onClick={() => setMenuOpen(false)}>About me</a></li>
             <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
