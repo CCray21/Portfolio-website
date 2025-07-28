@@ -52,5 +52,9 @@
     margin: 1rem;
     text-align: center;
     color: black;
-    
+}
+@media(max-width: 768px){
+    .projectTitle{
+        font-size: 1rem;
+    }
 }
