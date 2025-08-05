@@ -25,7 +25,6 @@ function Header()
 
     const toggleMenu = () => {
       setMenuOpen(prev => !prev)
-      console.log('menuOpen')
     }
 
     return (

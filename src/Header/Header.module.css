@@ -8,7 +8,7 @@
   font-family: Poppins, Montserrat;
   transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
-  .navList {
+.navList {
     display: flex;
     gap: 4rem;
     list-style: none;
@@ -43,19 +43,27 @@ a:hover
 }
 @media (max-width: 768px){
     .navList{
-        display: none;
-    }
-    .navList.open{
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
         background-color: #0d1117;
         position: absolute;
         top: 100%;
-        left: 0;
+        right: 1.4rem;
         width: 100%;
         padding: 1rem 0;
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 150ms ease, transform 150ms ease, visibility 150ms;
+    }
+    .navList.open{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        display: flex;
     }
     .hamburger{
         display: flex;
@@ -65,7 +73,7 @@ a:hover
         color: white;
         cursor: pointer;
         align-self: center;
-        margin-right: 4rem;
+        margin-right: 3rem;
     }
     a{
         color: #ffffff;
