@@ -1,31 +1,25 @@
 .contactCards{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-8);
     justify-items: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
-    max-width: 1200px;
-    transition: background-color 0.3s ease;
+    padding-top: var(--space-8);
 }
 .contactTitle {
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: clamp(1.75rem, 1.5vw + .75rem, 2.25rem);
+    margin-bottom: var(--space-4);
+    color: var(--text-on-dark);
 }
 .contactSection {
-    padding: 40px 20px;
-    background-color: blue;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-on-dark);
 }
 .contactDescription {
     text-align: center;
-    font-size: 1.2em;
-    margin: 20px 100px;
-    color: white;
+    font-size: 1.05rem;
+    margin: 0 auto var(--space-8);
+    max-width: 65ch;
+    color: rgba(255,255,255,.9);
 }
 @media (max-width: 1020px){
     .contactCards{

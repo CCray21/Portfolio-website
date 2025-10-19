@@ -6,16 +6,16 @@ import MiniApps from '../assets/miniApps.png';
 
 function ProjectsSection() {
     return (
-        <section className={styles.projectsSection} id="projects">
+        <div className={styles.projectsSection}>
             <h2 className={styles.sectionTitle}>Projects</h2>
             <p className={styles.sectionDescription}>
-                Here are some of the projects I have worked on throughout my journey to fullfil my lifelong dream of becoming a full time developer one day. Click on the cards to view the source code.
+                Here are some of the projects I have worked on throughout my journey to fulfill my lifelong dream of becoming a full-time developer. Click on the cards to view the source code.
             </p>
             <div className={styles.projectCards}>
                 <ProjectCard
                     index={1}
-                    link = "https://github.com/CCray21/XLN-case-duplicate-prevention"
-                    color = "turquoise"
+                    link="https://github.com/CCray21/XLN-case-duplicate-prevention"
+                    color="turquoise"
                     img={XLN}
                     title="Daisy communications duplicate case prevention system"
                     description="I worked with a small team to make a website for Daisy Communications. This includes (but not limited to) a PHP mailer bot and a staff hierarchy system."
@@ -37,7 +37,7 @@ function ProjectsSection() {
                     description="For my first semester project, I created a console based application with a top level menu system, a trinary converter, a school roster and an ISBN code verifier"
                 />
             </div>
-        </section>
+        </div>
     );
 }
 

@@ -4,9 +4,7 @@ import styles from './ProjectCard.module.css';
 function ProjectCard({ title, img, description, color, link, index }) {
   const ref = useRef();
   const [isVisible, setIsVisible] = useState(false);
-  const fadeStyle = isVisible
-  ? { backgroundColor: color, transitionDelay: `${index * 0.2}s` }
-  : { backgroundColor: color, transitionDelay: '0s'};
+  // delay handled via CSS var
 
 
   useEffect(() => {
@@ -25,28 +23,28 @@ function ProjectCard({ title, img, description, color, link, index }) {
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      const node = ref.current;
+      if (node) observer.unobserve(node);
     };
   }, []);
 
-  const delay = `${index * 0.2}s`;
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-    <div
-    ref={ref}
-    style={{
-        backgroundColor: color,
-        '--delay': isVisible ? `${index * 0.2}s` : '0s',
-    }}
-    className={`${styles.projectCard} ${isVisible ? styles.projectCardVisible : ''}`}
-    >
+    <a href={link} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+      <div
+        ref={ref}
+        style={{
+          '--accent': color,
+          '--delay': isVisible ? `${index * 0.2}s` : '0s',
+        }}
+        className={`${styles.projectCard} ${isVisible ? styles.projectCardVisible : ''}`}
+      >
         <img className={styles.projectImg} src={img} alt="" />
         <h3 className={styles.projectTitle}>{title}</h3>
         <p className={styles.projectDescription}>{description}</p>
-    </div>
+      </div>
     </a>
-    )
+  )
 }
 
 export default ProjectCard;

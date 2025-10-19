@@ -17,16 +17,22 @@ function App() {
   },[activeSection]);
   return(
     <>
-      <Header/>
-    <section className = {styles.aboutMe} id="aboutMe">
-      <Card/>
-    </section>
-    <section className = {styles.projects} id="projects">
-      <ProjectsSection/>
-    </section>
-    <section className={styles.contact} id="contact">
-      <ContactSection/>
-    </section>
+      <Header activeSection={activeSection} />
+      <section className={styles.aboutMe} id="aboutMe">
+        <div className="container">
+          <Card/>
+        </div>
+      </section>
+      <section className={styles.projects} id="projects">
+        <div className="container">
+          <ProjectsSection/>
+        </div>
+      </section>
+      <section className={styles.contact} id="contact">
+        <div className="container">
+          <ContactSection/>
+        </div>
+      </section>
     </>
   );
 }

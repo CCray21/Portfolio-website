@@ -2,59 +2,57 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    max-width: 400px;
-    max-height: 300px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 380px;
+    min-height: 320px;
+        background-color: var(--surface-card);
+        border-top: 4px solid var(--accent, transparent);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-6);
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.8s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow .2s ease;
     will-change: opacity, transform;
 }
   
 .projectCardVisible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.8s ease-out var(--delay, 0s), transform 0.8s ease-out;
+    transition: opacity 0.8s ease-out var(--delay, 0s), transform 0.8s ease-out var(--delay, 0s);
 }
   
 .projectCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
 }
 .projectCardHovered {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }    
-.projectImg
-{
-    width:100%;
-    max-height: 130px;
+.projectImg {
+    width: 100%;
+    height: 140px;
     object-fit: cover;
-    border-radius: 8px;
-    margin: 10px 0;
+    border-radius: var(--radius-sm);
+    margin: 0 0 var(--space-4);
 }
-.projectTitle
-{
-    font-size: 1.5em;
-    margin: 10px;
+.projectTitle {
+    font-size: 1.25rem;
+    margin: 0 0 var(--space-2);
     text-align: center;
-    color: black;
+    color: #0f172a;
 }
-.projectDescription
-{
-    font-size: 1em;
-    margin: 1rem;
+.projectDescription {
+    font-size: .95rem;
+    margin: 0;
     text-align: center;
-    color: black;
+    color: #334155;
 }
 @media(max-width: 768px){
     .projectTitle{
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }

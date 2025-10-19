@@ -1,22 +1,19 @@
-.card
-{
-  border: 1px solid hsl(0, 0%, 80%);
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 40px;
+.card {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-8);
+  margin: 0 auto;
   text-align: center;
-  max-width: 250px;
-  display: inline-block;
+  max-width: 560px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
 }
 .cardImage {
-  width: 60%;
-  border-radius: 20px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
+  border: 4px solid rgba(255,255,255,.1);
 }
-.card .cardHeader
-{
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
+.card .cardHeader { font-size: 1.75rem; margin-bottom: var(--space-2); color: var(--text-on-dark); }

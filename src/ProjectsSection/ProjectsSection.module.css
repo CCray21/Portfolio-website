@@ -1,41 +1,33 @@
 .projectCards{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
-    max-width: 1200px;
-    transition: background-color 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-8);
+  justify-items: center;
+  padding-top: var(--space-8);
 }
 
 .sectionTitle {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: clamp(1.75rem, 1.5vw + .75rem, 2.25rem);
+  margin-bottom: var(--space-4);
 }
 .projectsSection {
-    padding: 40px 20px;
-    background-color: blue;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 .sectionDescription {
-    text-align: center;
-    font-size: 1.2em;
-    margin: 20px 100px;
-    color: white;
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 0 auto var(--space-8);
+  max-width: 65ch;
+  color: rgba(255,255,255,.9);
 }
 @media (max-width: 1084px){
   .projectCards {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 768px) {
   .sectionDescription{
-    margin: 20px 30px;
+    margin: 0 var(--space-4) var(--space-8);
   }
 }

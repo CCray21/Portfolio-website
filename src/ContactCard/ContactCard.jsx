@@ -2,11 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './ContactCard.module.css';
 
 function ContactCard({link, text, img, color, index}) {
-      const ref = useRef();
-      const [isVisible, setIsVisible] = useState(false);
-      const fadeStyle = isVisible
-      ? { backgroundColor: color, transitionDelay: `${index * 0.2}s` }
-      : { backgroundColor: color, transitionDelay: '0s'};
+  const ref = useRef();
+  const [isVisible, setIsVisible] = useState(false);
     
     
       useEffect(() => {
@@ -25,18 +22,18 @@ function ContactCard({link, text, img, color, index}) {
         }
     
         return () => {
-          if (ref.current) observer.unobserve(ref.current);
+          const node = ref.current;
+          if (node) observer.unobserve(node);
         };
       }, []);
-    
-      const delay = `${index * 0.2}s`;
+
 
     return(
         <a href={link} rel='noopener noreferrer' target='_blank' className={styles.contactLink}>
             <div
                 ref={ref}
                 style={{
-                    backgroundColor: color,
+          '--accent': color,
                     '--delay': isVisible ? `${index * 0.2}s` : '0s',
                 }}
                 className={`${styles.contactCard} ${isVisible ? styles.contactCardVisible : ''}`}
