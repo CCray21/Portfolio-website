@@ -1,9 +1,11 @@
 .projectCards{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* Let items shrink to fit viewport using min(100%, X) */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: var(--space-8);
-  justify-items: center;
+  justify-items: stretch;
   padding-top: var(--space-8);
+  width: 100%;
 }
 
 .sectionTitle {
@@ -22,9 +24,10 @@
   color: rgba(255,255,255,.9);
 }
 @media (max-width: 1084px){
-  .projectCards {
-    grid-template-columns: 1fr;
-  }
+  .projectCards { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px){
+  .projectCards { gap: var(--space-6); }
 }
 @media (max-width: 768px) {
   .sectionDescription{

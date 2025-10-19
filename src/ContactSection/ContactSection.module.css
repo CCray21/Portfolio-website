@@ -1,9 +1,10 @@
 .contactCards{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: var(--space-8);
-    justify-items: center;
+    justify-items: stretch;
     padding-top: var(--space-8);
+    width: 100%;
 }
 .contactTitle {
     text-align: center;
@@ -22,7 +23,6 @@
     color: rgba(255,255,255,.9);
 }
 @media (max-width: 1020px){
-    .contactCards{
-        grid-template-columns: 1fr;
-    }
+    .contactCards{ grid-template-columns: 1fr; justify-items: center; }
 }
+@media (max-width: 420px){ .contactCards { gap: var(--space-6); } }

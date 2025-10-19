@@ -30,7 +30,7 @@ function ProjectCard({ title, img, description, color, link, index }) {
 
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+    <a href={link} target="_blank" rel="noopener noreferrer" className={styles.projectLink} style={{textDecoration: 'none'}}>
       <div
         ref={ref}
         style={{

@@ -6,8 +6,8 @@
     width: 100%;
     max-width: 380px;
     min-height: 320px;
-        background-color: var(--surface-card);
-        border-top: 4px solid var(--accent, transparent);
+    background-color: var(--surface-card);
+    border-top: 4px solid var(--accent, transparent);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     padding: var(--space-6);
@@ -44,8 +44,7 @@
     margin: 0 0 var(--space-2);
     text-align: center;
     color: #0f172a;
-}
-.projectDescription {
+        width: 100%;
     font-size: .95rem;
     margin: 0;
     text-align: center;
@@ -56,3 +55,8 @@
         font-size: 1.1rem;
     }
 }
+
+/* Make the link wrapper block-level and full width to avoid overflow */
+.projectLink { display: block; width: 100%; }
+.projectLink, .projectLink * { max-width: 100%; }
+.projectImg { display: block; }

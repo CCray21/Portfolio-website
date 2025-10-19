@@ -28,8 +28,8 @@ function ContactCard({link, text, img, color, index}) {
       }, []);
 
 
-    return(
-        <a href={link} rel='noopener noreferrer' target='_blank' className={styles.contactLink}>
+  return(
+    <a href={link} rel='noopener noreferrer' target='_blank' className={styles.contactLink}>
             <div
                 ref={ref}
                 style={{
