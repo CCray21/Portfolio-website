@@ -4,7 +4,7 @@
   --font-display: 'Poppins', var(--font-sans);
 
   /* Colors */
-  --bg: #0b0f14;              /* app background */
+  --bg: #0b0f14;              /* background */
   --surface-1: #0d1117;       /* dark section */
   --surface-2: #111827;       /* slightly lighter */
   --surface-card: #ffffff;    /* card surface */
