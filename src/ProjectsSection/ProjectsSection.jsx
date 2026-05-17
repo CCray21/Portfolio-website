@@ -2,7 +2,7 @@ import styles from './ProjectsSection.module.css';
 import ProjectCard from '../ProjectCard/ProjectCard.jsx';
 import XLN from '../assets/XLN.png';
 import SmartHome from '../assets/smarthome.png';
-import MiniApps from '../assets/miniApps.png';
+import MTCS from '../assets/MTCS.png';
 
 function ProjectsSection() {
     return (
@@ -30,11 +30,11 @@ function ProjectsSection() {
                 />
                 <ProjectCard
                     index={3}
-                    link="https://github.com/CCray21/Mini-apps"
-                    img={MiniApps}
+                    link="https://github.com/CCray21/Multi-tenant-complaint-management-system"
+                    img={MTCS}
                     color="red"
-                    title="Mini apps"
-                    description="For my first semester project, I created a console based application with a top level menu system, a trinary converter, a school roster and an ISBN code verifier"
+                    title="Multi Tenant Complaint Management System"
+                    description="For my software architecture and design module, I designed and implemented a multi-tenant complaint management system using .NET MVC, Microsoft Cookie Authentication and Entity Framework, where complaints were only accessible to the tenant who the complaint was submitted to."
                 />
             </div>
         </div>
